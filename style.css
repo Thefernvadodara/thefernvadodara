@@ -1,3 +1,7 @@
+/* ==========================
+   RESET
+========================== */
+
 *{
     margin:0;
     padding:0;
@@ -5,183 +9,113 @@
 }
 
 body{
-
     font-family:'Poppins',sans-serif;
-
-    height:100vh;
-
-    background:url("assets/background.jpg") center center/cover no-repeat fixed;
-
-    overflow:hidden;
-
+    background:url("assets/bg.jpg") center center/cover no-repeat;
+    min-height:100vh;
 }
 
-/* Overlay */
+/* ==========================
+   OVERLAY
+========================== */
 
 .overlay{
-
     width:100%;
-    height:100vh;
-
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-
-    background:rgba(0,0,0,.30);
-
-    padding:25px;
-
+    background:rgba(0,0,0,.35);
+    padding:20px;
 }
 
-/* Glass Card */
+/* ==========================
+   GLASS CARD
+========================== */
 
 .glass-card{
-
-    width:760px;
+    width:750px;
     max-width:95%;
-
-    padding:45px;
-
-    border-radius:30px;
-
-    position:relative;
-
-    overflow:hidden;
+    padding:40px;
+    border-radius:25px;
 
     background:rgba(255,255,255,.18);
-
-    border:1px solid rgba(255,255,255,.35);
 
     backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);
 
-    box-shadow:
-    0 20px 50px rgba(0,0,0,.30);
+    border:1px solid rgba(255,255,255,.35);
 
-}
-
-/* Shine */
-
-.glass-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(
-        135deg,
-        rgba(255,255,255,.20),
-        rgba(255,255,255,.05)
-    );
-
-    pointer-events:none;
-
-}
-
-/* Keep content above glass */
-
-.glass-card>*{
-
-    position:relative;
-
-    z-index:5;
-
-}
-
-/* Logo */
-
-.logo{
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
 
     text-align:center;
+}
 
+/* ==========================
+   LOGO
+========================== */
+
+.logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
     margin-bottom:25px;
-
 }
 
 .logo img{
 
-    width:150px;
-    max-width:50%;
+    width:100px;     /* 50px करना हो तो यहाँ 50px लिखें */
+
+    height:auto;
 
     display:block;
 
-    margin:auto;
-
 }
 
-/* Heading */
+/* ==========================
+   TITLE
+========================== */
 
 h1{
-
-    text-align:center;
-
+    font-size:46px;
+    color:#0B5D45;
     font-family:'Cormorant Garamond',serif;
-
-    color:#0E5A43;
-
-    font-size:48px;
-
-    letter-spacing:2px;
-
-    margin-bottom:15px;
-
+    margin-bottom:10px;
 }
 
-/* Gold Line */
-
 .line{
-
     width:120px;
-    height:4px;
-
-    background:#C9A54C;
-
-    margin:auto;
-
-    border-radius:10px;
-
-    margin-bottom:18px;
-
+    height:3px;
+    background:#C9A44D;
+    margin:15px auto;
 }
 
 p{
-
-    text-align:center;
-
-    color:#444;
-
     font-size:20px;
-
+    color:#444;
     margin-bottom:35px;
-
 }
 
-/* Buttons */
+/* ==========================
+   BUTTONS
+========================== */
 
 .button-area{
-
     display:flex;
-
     justify-content:center;
-
     gap:25px;
-
     flex-wrap:wrap;
-
 }
 
 .card-btn{
 
-    width:270px;
-    height:180px;
+    width:250px;
+    height:170px;
+
+    background:#0B5D45;
+
+    border-radius:18px;
 
     text-decoration:none;
-
-    border-radius:20px;
-
-    background:#0E5A43;
 
     color:white;
 
@@ -193,9 +127,7 @@ p{
 
     align-items:center;
 
-    transition:.35s;
-
-    box-shadow:0 15px 30px rgba(0,0,0,.25);
+    transition:.3s;
 
 }
 
@@ -203,16 +135,14 @@ p{
 
     transform:translateY(-8px);
 
-    background:#157052;
-
-    box-shadow:0 25px 40px rgba(0,0,0,.35);
+    background:#147558;
 
 }
 
 .icon{
 
-    width:80px;
-    height:80px;
+    width:75px;
+    height:75px;
 
     border-radius:50%;
 
@@ -230,101 +160,61 @@ p{
 
 .icon i{
 
-    font-size:38px;
+    font-size:34px;
 
-    color:#C9A54C;
+    color:#C9A44D;
 
 }
 
 .card-btn span{
 
-    font-size:21px;
+    font-size:20px;
 
     font-weight:600;
-
-    text-align:center;
-
-    letter-spacing:.5px;
 
 }
 
-/* Footer */
+/* ==========================
+   FOOTER
+========================== */
 
 .paperless{
 
-    text-align:center;
-
     margin-top:35px;
 
-    color:#0E5A43;
-
-    font-size:18px;
+    color:#0B5D45;
 
     font-weight:600;
+
+    font-size:18px;
 
 }
 
 .paperless i{
 
-    color:#3AA45D;
-
-    margin-right:6px;
+    color:green;
 
 }
 
 .thanks{
 
-    text-align:center;
-
     margin-top:10px;
 
-    color:#444;
+    color:#555;
 
-    font-size:16px;
-
-}
-
-/* Animation */
-
-.glass-card{
-
-    animation:fade .8s ease;
+    font-size:15px;
 
 }
 
-@keyframes fade{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(30px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-/* Responsive */
+/* ==========================
+   RESPONSIVE
+========================== */
 
 @media(max-width:768px){
 
     .glass-card{
 
-        padding:30px 20px;
-
-    }
-
-    .logo img{
-
-        width:220px;
+        padding:25px;
 
     }
 
@@ -334,22 +224,19 @@ p{
 
     }
 
-    p{
+    .button-area{
 
-        font-size:16px;
+        flex-direction:column;
+
+        align-items:center;
 
     }
 
     .card-btn{
 
         width:100%;
-        height:150px;
 
-    }
-
-    .card-btn span{
-
-        font-size:18px;
+        max-width:300px;
 
     }
 
