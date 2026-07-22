@@ -3,126 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guest Directory</title>
 
-<style>
+<title>Guest Information</title>
 
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f5f5f5;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-}
+<link rel="stylesheet" href="style.css">
 
-.card{
-
-background:white;
-
-width:400px;
-
-padding:35px;
-
-border-radius:15px;
-
-text-align:center;
-
-box-shadow:0 5px 20px rgba(0,0,0,.15);
-
-}
-
-.logo{
-
-width:280px;
-
-margin-bottom:20px;
-
-}
-
-h1{
-
-color:#0d5d3b;
-
-margin-bottom:10px;
-
-}
-
-p{
-
-color:#666;
-
-margin-bottom:25px;
-
-}
-
-.btn{
-
-display:block;
-
-background:#0d5d3b;
-
-color:white;
-
-text-decoration:none;
-
-padding:15px;
-
-margin:15px 0;
-
-border-radius:8px;
-
-font-size:17px;
-
-font-weight:bold;
-
-}
-
-.btn:hover{
-
-background:#c7a247;
-
-}
-
-.footer{
-
-margin-top:25px;
-
-font-size:13px;
-
-color:#666;
-
-}
-
-</style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
+<div class="overlay">
+
 <div class="card">
 
-<img src="logo.png" class="logo">
+<div class="logos">
+
+<img src="images/fern-logo.png">
+
+<div class="line"></div>
+
+<img src="images/marriott-logo.png">
+
+</div>
 
 <h1>Guest Information</h1>
 
-<p>Please select an option below.</p>
+<p>Please select an option below</p>
 
-<a class="btn" 
-  href="RoomDirectory.pdf" target="_blank">
-📖 Room Directory
-</a>
+<div class="buttons">
 
-</a>
+<a href="directory.pdf" class="box">
 
-<a class="btn"
-href="MENU_LINK"
-target="_blank">
+<i class="fa-solid fa-book-open"></i>
 
-🍽 Restaurant Menu
+<h2>Room Directory</h2>
 
 </a>
+
+<a href="menu.pdf" class="box">
+
+<i class="fa-solid fa-utensils"></i>
+
+<h2>Restaurant Menu</h2>
+
+</a>
+
+</div>
 
 <div class="footer">
 
@@ -136,6 +65,7 @@ Thank You For Staying With Us.
 
 </div>
 
-</body>
+</div>
 
+</body>
 </html>
