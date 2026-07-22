@@ -1,98 +1,356 @@
-<!DOCTYPE html>
-<html lang="en">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-<head>
+body{
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    font-family:'Poppins',sans-serif;
 
-    <title>Guest Information | The Fern Vadodara</title>
+    height:100vh;
 
-    <link rel="stylesheet" href="style.css">
+    background:url("assets/bg.jpg") center center/cover no-repeat fixed;
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    overflow:hidden;
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+/* Overlay */
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+.overlay{
 
-</head>
+    width:100%;
+    height:100vh;
 
-<body>
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    <div class="overlay">
+    background:rgba(0,0,0,.30);
 
-        <div class="glass-card">
+    padding:25px;
 
-            <!-- Logo -->
+}
 
-            <div class="logo">
+/* Glass Card */
 
-                <img src="assets/logo.png" alt="The Fern">
+.glass-card{
 
-            </div>
+    width:760px;
+    max-width:95%;
 
-            <!-- Title -->
+    padding:45px;
 
-            <h1>GUEST INFORMATION</h1>
+    border-radius:30px;
 
-            <div class="line"></div>
+    position:relative;
 
-            <p>Please select an option below.</p>
+    overflow:hidden;
 
-            <!-- Buttons -->
+    background:rgba(255,255,255,.18);
 
-            <div class="button-area">
+    border:1px solid rgba(255,255,255,.35);
 
-                <a href="room-directory.pdf" target="_blank" class="card-btn">
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 
-                    <div class="icon">
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.30);
 
-                        <i class="fa-solid fa-book-open"></i>
+}
 
-                    </div>
+/* Shine */
 
-                    <span>ROOM DIRECTORY</span>
+.glass-card::before{
 
-                </a>
+    content:"";
 
-                <a href="restaurant-menu.pdf" target="_blank" class="card-btn">
+    position:absolute;
 
-                    <div class="icon">
+    inset:0;
 
-                        <i class="fa-solid fa-utensils"></i>
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.20),
+        rgba(255,255,255,.05)
+    );
 
-                    </div>
+    pointer-events:none;
 
-                    <span>RESTAURANT MENU</span>
+}
 
-                </a>
+/* Keep content above glass */
 
-            </div>
+.glass-card>*{
 
-            <!-- Footer -->
+    position:relative;
 
-            <div class="paperless">
+    z-index:5;
 
-                <i class="fa-solid fa-leaf"></i>
+}
 
-                Go Paperless. Go Green.
+/* Logo */
 
-            </div>
+.logo{
 
-            <div class="thanks">
+    text-align:center;
 
-                Thank You For Staying With Us.
+    margin-bottom:25px;
 
-            </div>
+}
 
-        </div>
+.logo img{
 
-    </div>
+    width:300px;
+    max-width:100%;
 
-</body>
+    display:block;
 
-</html>
+    margin:auto;
+
+}
+
+/* Heading */
+
+h1{
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#0E5A43;
+
+    font-size:48px;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+
+}
+
+/* Gold Line */
+
+.line{
+
+    width:120px;
+    height:4px;
+
+    background:#C9A54C;
+
+    margin:auto;
+
+    border-radius:10px;
+
+    margin-bottom:18px;
+
+}
+
+p{
+
+    text-align:center;
+
+    color:#444;
+
+    font-size:20px;
+
+    margin-bottom:35px;
+
+}
+
+/* Buttons */
+
+.button-area{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.card-btn{
+
+    width:270px;
+    height:180px;
+
+    text-decoration:none;
+
+    border-radius:20px;
+
+    background:#0E5A43;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.35s;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+}
+
+.card-btn:hover{
+
+    transform:translateY(-8px);
+
+    background:#157052;
+
+    box-shadow:0 25px 40px rgba(0,0,0,.35);
+
+}
+
+.icon{
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.icon i{
+
+    font-size:38px;
+
+    color:#C9A54C;
+
+}
+
+.card-btn span{
+
+    font-size:21px;
+
+    font-weight:600;
+
+    text-align:center;
+
+    letter-spacing:.5px;
+
+}
+
+/* Footer */
+
+.paperless{
+
+    text-align:center;
+
+    margin-top:35px;
+
+    color:#0E5A43;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.paperless i{
+
+    color:#3AA45D;
+
+    margin-right:6px;
+
+}
+
+.thanks{
+
+    text-align:center;
+
+    margin-top:10px;
+
+    color:#444;
+
+    font-size:16px;
+
+}
+
+/* Animation */
+
+.glass-card{
+
+    animation:fade .8s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .glass-card{
+
+        padding:30px 20px;
+
+    }
+
+    .logo img{
+
+        width:220px;
+
+    }
+
+    h1{
+
+        font-size:34px;
+
+    }
+
+    p{
+
+        font-size:16px;
+
+    }
+
+    .card-btn{
+
+        width:100%;
+        height:150px;
+
+    }
+
+    .card-btn span{
+
+        font-size:18px;
+
+    }
+
+}
