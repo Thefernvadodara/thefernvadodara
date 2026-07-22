@@ -1,154 +1,98 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-body{
+<head>
 
-background:url("assets/bg.jpg") center/cover no-repeat;
-height:100vh;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-display:flex;
-justify-content:center;
-align-items:center;
+    <title>Guest Information | The Fern Vadodara</title>
 
-}
+    <link rel="stylesheet" href="style.css">
 
-.overlay{
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-width:100%;
-height:100%;
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-background:rgba(0,0,0,.25);
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-display:flex;
-justify-content:center;
-align-items:center;
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-}
+</head>
 
-.card{
+<body>
 
-width:650px;
+    <div class="overlay">
 
-background:rgba(255,255,255,.88);
+        <div class="glass-card">
 
-backdrop-filter:blur(14px);
+            <!-- Logo -->
 
-border-radius:35px;
+            <div class="logo">
 
-padding:50px;
+                <img src="assets/logo.png" alt="The Fern">
 
-box-shadow:0 20px 40px rgba(0,0,0,.25);
+            </div>
 
-text-align:center;
+            <!-- Title -->
 
-}
+            <h1>GUEST INFORMATION</h1>
 
-.logo img{
+            <div class="line"></div>
 
-width:280px;
+            <p>Please select an option below.</p>
 
-margin-bottom:30px;
+            <!-- Buttons -->
 
-}
+            <div class="button-area">
 
-h1{
+                <a href="room-directory.pdf" target="_blank" class="card-btn">
 
-color:#0f5132;
+                    <div class="icon">
 
-font-size:48px;
+                        <i class="fa-solid fa-book-open"></i>
 
-letter-spacing:2px;
+                    </div>
 
-margin-bottom:15px;
+                    <span>ROOM DIRECTORY</span>
 
-}
+                </a>
 
-p{
+                <a href="restaurant-menu.pdf" target="_blank" class="card-btn">
 
-font-size:22px;
+                    <div class="icon">
 
-color:#444;
+                        <i class="fa-solid fa-utensils"></i>
 
-margin-bottom:35px;
+                    </div>
 
-}
+                    <span>RESTAURANT MENU</span>
 
-.buttons{
+                </a>
 
-display:flex;
+            </div>
 
-gap:25px;
+            <!-- Footer -->
 
-justify-content:center;
+            <div class="paperless">
 
-flex-wrap:wrap;
+                <i class="fa-solid fa-leaf"></i>
 
-}
+                Go Paperless. Go Green.
 
-.btn{
+            </div>
 
-width:240px;
+            <div class="thanks">
 
-height:210px;
+                Thank You For Staying With Us.
 
-background:#0f5132;
+            </div>
 
-border-radius:18px;
+        </div>
 
-color:#fff;
+    </div>
 
-text-decoration:none;
+</body>
 
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-transition:.35s;
-
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-
-}
-
-.btn:hover{
-
-transform:translateY(-10px);
-
-background:#126842;
-
-}
-
-.btn i{
-
-font-size:70px;
-
-margin-bottom:20px;
-
-color:#d9b15c;
-
-}
-
-.btn span{
-
-font-size:26px;
-
-font-weight:bold;
-
-}
-
-.footer{
-
-margin-top:40px;
-
-font-size:22px;
-
-color:#0f5132;
-
-}
+</html>
