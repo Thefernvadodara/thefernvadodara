@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Guest Information</title>
+<title>The Fern Guest Information</title>
 
 <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -17,39 +23,89 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 <div class="overlay">
 
-    <div class="card">
+<div class="card">
 
-        <div class="logos">
-            <img src="logo.png" alt="The Fern Logo">
-        </div>
+<!-- Logo -->
 
-        <h1>Guest Information</h1>
+<div class="logo-section">
 
-        <p>Please select an option below</p>
+<img src="assets/logo.png"
+class="fern-logo"
+alt="The Fern">
 
-        <div class="buttons">
-
-            <a href="RoomDirectory.pdf" class="box">
-                <i class="fa-solid fa-book-open"></i>
-                <h2>Room Directory</h2>
-            </a>
-
-            <a href="menu.pdf" class="box">
-                <i class="fa-solid fa-utensils"></i>
-                <h2>Restaurant Menu</h2>
-            </a>
-
-        </div>
-
-        <div class="footer">
-            🌿 Go Paperless. Go Green.
-            <br><br>
-            Thank You For Staying With Us.
-        </div>
-
-    </div>
+<img src="assets/marriott.png"
+class="marriott-logo"
+alt="Series by Marriott">
 
 </div>
+
+<!-- Hotel Image -->
+
+<div class="hotel-image">
+
+<img src="assets/hotel.png"
+alt="Hotel">
+
+</div>
+
+<!-- Heading -->
+
+<h1>Guest Information</h1>
+
+<p>
+Welcome to The Fern.<br>
+Please select one of the options below.
+</p>
+
+<!-- Buttons -->
+
+<div class="button-group">
+
+<a href="room-directory.pdf" target="_blank" class="btn">
+
+<div class="icon">
+<i class="fa-solid fa-book-open"></i>
+</div>
+
+<div class="text">
+<h3>Room Directory</h3>
+<span>Hotel Services & Information</span>
+</div>
+
+<i class="fa-solid fa-angle-right arrow"></i>
+
+</a>
+
+<a href="restaurant-menu.pdf" target="_blank" class="btn">
+
+<div class="icon">
+<i class="fa-solid fa-utensils"></i>
+</div>
+
+<div class="text">
+<h3>Restaurant Menu</h3>
+<span>Food & Beverage Menu</span>
+</div>
+
+<i class="fa-solid fa-angle-right arrow"></i>
+
+</a>
+
+</div>
+
+<!-- Footer -->
+
+<div class="footer">
+
+© 2026 The Fern Hotels & Resorts
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
