@@ -2,193 +2,101 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-
-background:url("images/bg.jpg") center center/cover no-repeat;
-
+background:url("background.jpg") center center/cover no-repeat;
 height:100vh;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 }
 
 .overlay{
-
 width:100%;
 height:100%;
-background:rgba(0,0,0,.25);
-
+background:rgba(0,0,0,.35);
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 }
 
 .card{
-
-width:480px;
-
+width:500px;
 background:rgba(255,255,255,.92);
-
-backdrop-filter:blur(15px);
-
-padding:45px;
-
+padding:40px;
 border-radius:25px;
-
-box-shadow:0 20px 50px rgba(0,0,0,.35);
-
 text-align:center;
-
-}
-
-.logos{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-gap:25px;
-
-margin-bottom:30px;
-
+box-shadow:0 15px 40px rgba(0,0,0,.35);
 }
 
 .logos img{
-
-height:70px;
-
-}
-
-.line{
-
-width:2px;
-
-height:65px;
-
-background:#999;
-
+height:90px;
+margin-bottom:20px;
 }
 
 h1{
-
-font-size:48px;
-
+font-size:42px;
 color:#0d5c40;
-
-margin-bottom:15px;
-
-font-family:Georgia,serif;
-
+margin-bottom:10px;
 }
 
 p{
-
-font-size:19px;
-
 color:#666;
-
-margin-bottom:35px;
-
+margin-bottom:30px;
+font-size:18px;
 }
 
 .buttons{
-
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 gap:20px;
-
 }
 
 .box{
-
 background:#0d5c40;
-
-border-radius:18px;
-
-padding:35px 20px;
-
-text-decoration:none;
-
 color:white;
-
+text-decoration:none;
+padding:30px 20px;
+border-radius:18px;
 transition:.3s;
-
-box-shadow:0 8px 25px rgba(0,0,0,.25);
-
 }
 
 .box:hover{
-
-transform:translateY(-8px);
-
-background:#137350;
-
+background:#16734f;
+transform:translateY(-5px);
 }
 
 .box i{
-
-font-size:55px;
-
-margin-bottom:20px;
-
-color:#d9b96b;
-
+font-size:50px;
+color:#d8b35f;
+margin-bottom:15px;
 }
 
 .box h2{
-
-font-size:26px;
-
-font-weight:600;
-
+font-size:22px;
 }
 
 .footer{
-
-margin-top:40px;
-
-font-size:18px;
-
-color:#555;
-
-line-height:1.8;
-
+margin-top:30px;
+color:#444;
+font-size:16px;
 }
 
 @media(max-width:600px){
 
 .card{
-
-width:95%;
-
-padding:30px;
-
+width:90%;
+padding:25px;
 }
 
 .buttons{
-
 grid-template-columns:1fr;
-
 }
 
 h1{
-
-font-size:34px;
-
+font-size:30px;
 }
 
 }
