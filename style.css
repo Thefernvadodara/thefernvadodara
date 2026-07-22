@@ -1,243 +1,136 @@
-/* ==========================
-   RESET
-========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:url("assets/bg.jpg") center center/cover no-repeat;
-    min-height:100vh;
+body {
+    background: linear-gradient(135deg, #1b382b, #0f241a);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-/* ==========================
-   OVERLAY
-========================== */
-
-.overlay{
-    width:100%;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:rgba(0,0,0,.35);
-    padding:20px;
+.card {
+    background: #fcfbf7;
+    border-radius: 24px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border: 1px solid #e2dac9;
 }
 
-/* ==========================
-   GLASS CARD
-========================== */
-
-.glass-card{
-    width:750px;
-    max-width:95%;
-    padding:40px;
-    border-radius:25px;
-
-    background:rgba(255,255,255,.18);
-
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.35);
-
-    box-shadow:0 15px 40px rgba(0,0,0,.35);
-
-    text-align:center;
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
 }
 
-/* ==========================
-   LOGO
-========================== */
-
-.logo{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-bottom:25px;
+.logo-left h2, .logo-right h2 {
+    font-size: 1.2rem;
+    color: #12372a;
+    letter-spacing: 2px;
 }
 
-.logo img{
-
-    width:100px;     /* 50px करना हो तो यहाँ 50px लिखें */
-
-    height:auto;
-
-    display:block;
-
+.logo-left p, .logo-right p {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    color: #555;
 }
 
-/* ==========================
-   TITLE
-========================== */
-
-h1{
-    font-size:46px;
-    color:#0B5D45;
-    font-family:'Cormorant Garamond',serif;
-    margin-bottom:10px;
+.divider {
+    width: 1px;
+    height: 35px;
+    background-color: #a3b18a;
 }
 
-.line{
-    width:120px;
-    height:3px;
-    background:#C9A44D;
-    margin:15px auto;
+/* Titles */
+.title {
+    color: #12372a;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
 }
 
-p{
-    font-size:20px;
-    color:#444;
-    margin-bottom:35px;
+.subtitle {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    font-style: italic;
 }
 
-/* ==========================
-   BUTTONS
-========================== */
-
-.button-area{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
+/* Buttons Container */
+.buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-.card-btn{
-
-    width:250px;
-    height:170px;
-
-    background:#0B5D45;
-
-    border-radius:18px;
-
-    text-decoration:none;
-
-    color:white;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    transition:.3s;
-
+.menu-btn {
+    background: linear-gradient(145deg, #0f382c, #09261d);
+    color: #d4af37;
+    text-decoration: none;
+    border-radius: 16px;
+    padding: 25px 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.card-btn:hover{
-
-    transform:translateY(-8px);
-
-    background:#147558;
-
+.menu-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.3);
 }
 
-.icon{
-
-    width:75px;
-    height:75px;
-
-    border-radius:50%;
-
-    background:white;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    margin-bottom:18px;
-
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border: 1.5px solid #d4af37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
 }
 
-.icon i{
-
-    font-size:34px;
-
-    color:#C9A44D;
-
+.menu-btn span {
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
-.card-btn span{
-
-    font-size:20px;
-
-    font-weight:600;
-
+/* Footer elements */
+.green-tag {
+    color: #12372a;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
-/* ==========================
-   FOOTER
-========================== */
-
-.paperless{
-
-    margin-top:35px;
-
-    color:#0B5D45;
-
-    font-weight:600;
-
-    font-size:18px;
-
+.thank-you {
+    color: #12372a;
+    font-size: 1.1rem;
+    font-style: italic;
 }
 
-.paperless i{
-
-    color:green;
-
-}
-
-.thanks{
-
-    margin-top:10px;
-
-    color:#555;
-
-    font-size:15px;
-
-}
-
-/* ==========================
-   RESPONSIVE
-========================== */
-
-@media(max-width:768px){
-
-    .glass-card{
-
-        padding:25px;
-
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .buttons-container {
+        flex-direction: column;
     }
-
-    h1{
-
-        font-size:34px;
-
-    }
-
-    .button-area{
-
-        flex-direction:column;
-
-        align-items:center;
-
-    }
-
-    .card-btn{
-
-        width:100%;
-
-        max-width:300px;
-
-    }
-
 }
