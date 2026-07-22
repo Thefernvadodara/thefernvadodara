@@ -2,249 +2,66 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Georgia', serif;
 }
 
 body {
-    background-color: #0d2116; /* Base deep green */
+    background-color: #0d2116; /* Deep green matching hotel theme */
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    overflow: hidden; /* To handle graphics overflow */
+    padding: 10px;
+}
+
+.card-container {
     position: relative;
-}
-
-/* --- BACKGROUND GRAPHICS --- */
-.bg-graphics-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 0; /* Behind everything */
-    overflow: hidden;
-}
-
-/* Main gradient overlay, like ChatGPT Image Jul 22, 2026, 11_05_14 AM.png */
-.bg-graphics-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(30, 60, 45, 0.4) 0%, rgba(13, 33, 22, 1) 100%);
-    z-index: 1;
-}
-
-/* Graphical Fern Leaves (replicating the image design) */
-.bg-fern-left, .bg-fern-right {
-    position: absolute;
-    width: 50vw;
-    height: 50vh;
-    opacity: 0.15; /* Transparent effect */
-    z-index: 2;
-}
-
-/* Leaf graphics - conceptual placeholders using masks for GitHub Pages compatibility without image files */
-.bg-fern-left {
-    background-color: #a3b18a;
-    -webkit-mask-image: radial-gradient(circle at top left, black 20%, transparent 80%);
-    mask-image: radial-gradient(circle at top left, black 20%, transparent 80%);
-}
-.bg-fern-right {
-    background-color: #a3b18a;
-    -webkit-mask-image: radial-gradient(circle at top right, black 20%, transparent 80%);
-    mask-image: radial-gradient(circle at top right, black 20%, transparent 80%);
-}
-
-.bg-fern-left.top { top: 0; left: 0; }
-.bg-fern-right.top { top: 0; right: 0; }
-.bg-fern-left.bottom { bottom: 0; left: 0; transform: scaleY(-1); }
-.bg-fern-right.bottom { bottom: 0; right: 0; transform: scaleY(-1); }
-
-
-/* Smoky Hotel Image Placeholder */
-.bg-hotel-smoky {
-    position: absolute;
-    bottom: -50px;
-    right: -100px;
-    width: 500px;
-    height: 500px;
-    background-color: #1e3c2d;
-    opacity: 0.1;
-    -webkit-mask-image: linear-gradient(to top, transparent, black 60%), radial-gradient(circle at center, black 10%, transparent 70%);
-    mask-image: linear-gradient(to top, transparent, black 60%), radial-gradient(circle at center, black 10%, transparent 70%);
-    border-radius: 50%;
-    z-index: 1;
-}
-
-/* Subtle graphic wave at the bottom */
-.bg-wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 15vh;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
-    z-index: 1;
-}
-
-/* --- MAIN CONTENT CARD --- */
-.card-wrapper {
-    position: relative;
-    z-index: 10; /* In front of graphics */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.card {
-    background: linear-gradient(180deg, #fcfbf7 0%, #f4f1e9 100%);
-    border-radius: 24px;
-    padding: 40px 30px;
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5); /* Deep shadow */
-    border: 1px solid #e2dac9;
-    position: relative;
-}
-
-/* Optional glow effect around the card */
-.card::after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    border-radius: 28px;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
-    z-index: -1;
-}
-
-/* Logo Styling */
-.logo-container {
+    max-width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
 }
 
-.logo-left h2, .logo-right h2 {
-    font-size: 1.2rem;
-    color: #12372a;
-    letter-spacing: 2.5px;
-    font-weight: normal;
+.bg-card {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    display: block;
 }
 
-.logo-left p, .logo-right p {
-    font-size: 0.65rem;
-    letter-spacing: 1.5px;
-    color: #555;
-    margin-top: -3px;
-}
-
-.divider {
-    width: 1px;
-    height: 40px;
-    background-color: #a3b18a;
-}
-
-/* Titles */
-.title {
-    color: #12372a;
-    font-size: 1.7rem;
-    letter-spacing: 2.5px;
-    margin-bottom: 10px;
-    font-weight: normal;
-}
-
-.subtitle {
-    color: #555;
-    font-size: 1rem;
-    margin-bottom: 30px;
-    font-style: italic;
-}
-
-/* Buttons Container */
-.buttons-container {
+/* Button Positioning over the two design boxes */
+.button-overlay-container {
+    position: absolute;
+    top: 44%; 
+    left: 28%;
+    width: 44%;
+    height: 25%;
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 35px;
+    gap: 5%;
 }
 
-.menu-btn {
-    background: linear-gradient(145deg, #0d2c20, #092119);
-    color: #d4af37;
-    text-decoration: none;
-    border-radius: 16px;
-    padding: 25px 15px;
+.overlay-btn {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid #1e3c2d;
+    height: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
 }
 
-.menu-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+.overlay-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.5);
 }
 
-.icon-circle {
-    width: 60px;
-    height: 60px;
-    border: 1.5px solid #d4af37;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
+.overlay-btn:active {
+    transform: scale(0.98);
 }
 
-.menu-btn span {
-    font-size: 0.85rem;
-    font-weight: bold;
-    letter-spacing: 1.2px;
-    text-align: center;
-}
-
-/* Footer elements */
-.green-tag {
-    color: #12372a;
-    font-size: 0.85rem;
-    margin-bottom: 12px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-.thank-you {
-    color: #12372a;
-    font-size: 1.1rem;
-    font-style: italic;
-    font-weight: lighter;
-}
-
-/* Mobile responsive */
+/* Responsive adjustment for small screens */
 @media (max-width: 480px) {
-    .buttons-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .card {
-        padding: 30px 20px;
+    .card-container {
+        max-width: 100%;
     }
 }
