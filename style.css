@@ -10,7 +10,7 @@ body{
 
     height:100vh;
 
-    background:url("assets/bg.jpg") center center/cover no-repeat fixed;
+    background:url("assets/background.jpg") center center/cover no-repeat fixed;
 
     overflow:hidden;
 
