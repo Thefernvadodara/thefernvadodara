@@ -5,23 +5,29 @@
     font-family: 'Georgia', serif;
 }
 
+/* Center alignment for full page */
+html, body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background: linear-gradient(135deg, #1b382b, #0f241a);
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
 }
 
 .card {
     background: #fcfbf7;
     border-radius: 24px;
     padding: 40px 30px;
-    width: 100%;
-    max-width: 500px;
+    width: 90%;
+    max-width: 480px;
     text-align: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     border: 1px solid #e2dac9;
 }
 
@@ -35,13 +41,13 @@ body {
 }
 
 .logo-left h2, .logo-right h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #12372a;
     letter-spacing: 2px;
 }
 
 .logo-left p, .logo-right p {
-    font-size: 0.6rem;
+    font-size: 0.55rem;
     letter-spacing: 1px;
     color: #555;
 }
@@ -55,24 +61,24 @@ body {
 /* Titles */
 .title {
     color: #12372a;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     letter-spacing: 2px;
     margin-bottom: 8px;
 }
 
 .subtitle {
     color: #555;
-    font-size: 0.95rem;
-    margin-bottom: 30px;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
     font-style: italic;
 }
 
 /* Buttons Container */
 .buttons-container {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .menu-btn {
@@ -80,35 +86,35 @@ body {
     color: #d4af37;
     text-decoration: none;
     border-radius: 16px;
-    padding: 25px 15px;
+    padding: 20px 10px;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    gap: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .menu-btn:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
 }
 
 .icon-circle {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border: 1.5px solid #d4af37;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 .menu-btn span {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: bold;
     letter-spacing: 1px;
     text-align: center;
@@ -117,14 +123,14 @@ body {
 /* Footer elements */
 .green-tag {
     color: #12372a;
-    font-size: 0.85rem;
-    margin-bottom: 10px;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
     font-weight: 600;
 }
 
 .thank-you {
     color: #12372a;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-style: italic;
 }
 
